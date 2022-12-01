@@ -1,0 +1,20 @@
+#!/bin/bash -x
+
+isPresent=1; 
+empRatePerHr=20;
+empHrs=8;
+
+
+randomCheck=$((RANDOM%2));
+
+if [ $isPresent -eq $randomCheck ];
+then
+
+	salary=$(($empHrs*$empRatePerHr));
+
+else
+
+	salary=0; 
+fi
+
+echo $salary
